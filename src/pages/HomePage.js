@@ -6,7 +6,7 @@ const HomePage = () => {
     <section className="flex gap-6">
 
       <Navbar />
-      home
+      HomePage
       </section>
     </>
   );
