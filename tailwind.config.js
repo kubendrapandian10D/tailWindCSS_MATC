@@ -9,6 +9,9 @@ module.exports = {
         'midBlack': "#43444d",
         'mildSandal': "#DBDADE",
         'purpleTaupe_': '#4B465C',
+        'mildGreen':'#37CB79',
+        'mildOrange':'#FF9F43',
+        'mildRed':'#EA5455',
         'grayMedium_': '#979797',
         'grayLight@': 'Gray-Light',
         'whiteSmoke_': '#F5F5F5'
@@ -16,11 +19,19 @@ module.exports = {
       dropShadow: {
         '4ds@': ' 0px 0px 4px rgba(165, 163, 174, 0.3)'
       },
+      fontSize: {
+        '9_': '9px',
+        '10_':'10px'
+      },
       fontFamily: {
-        'roboto_': ['Roboto']
+        'roboto_': ['Roboto'],
+        'mulish':['Mulish']
       },
       height: {
         '26@': '26px',
+        '35_':'35px',
+        '37_':'37px',
+        '134_': '134px',
         '60': '60px'
       },
       rotate: {
@@ -28,14 +39,19 @@ module.exports = {
       },
       spacing: {
         '7_': '7px',
+        '30_': '30px',
         '102': '102px'
       },
       width: {
+        '18_':'18px',
         '26_': '26px',
         '36_': '36px',
         '88': '88px',
+        '157_': '157px',
         '213_': '213px',
+        '363_': '363px',
         '742@': '742px',
+        '751_': '751px',
         '1138': '1138px',
         '1186': '1186px',
       },
