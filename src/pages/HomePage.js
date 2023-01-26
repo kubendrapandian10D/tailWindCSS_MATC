@@ -8,9 +8,9 @@ import Promotion from "../components/Promotion/Promotion";
 const HomePage = () => {
   return (
     <>
-      <section className="flex  ">
+      <section className="flex   ">
 
-        <Navbar className="w-64" />
+        <Navbar />
         <div className=" w-auto bg-lavendarLace_ ">
           <SearchBar />
           <div className="flex justify-end">
@@ -25,7 +25,7 @@ const HomePage = () => {
             </p>
           </div>
           <div className="flex ">
-            <div className=" mx-6 border border-solid  border-black w-751_">
+            <div className=" mx-6   w-751_">
               <Chart />
               <Announcements />
             </div>
