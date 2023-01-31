@@ -1,0 +1,96 @@
+import React from 'react';
+import GaugeChart from 'react-gauge-chart';
+
+const GuageChart = () => {
+
+    const chartData = [
+        {
+            id: 1,
+            title: 'Total Pending Orders',
+            subTitle: 'Today',
+            count: '10',
+            compName: 'sample',
+            footerTitle_1: 'Sample',
+            footerSubTitle_1: 'test',
+            footerCount_1: '777',
+
+            footerTitle_2: 'Current Daily Order',
+            footerSubTitle_2: 'Volume limitation',
+            footerCount_2: '10000',
+
+        }
+    ]
+
+    const chartStyle = {
+        height: 43,
+        width:'100%', 
+
+      }
+
+    return (
+
+
+
+        <div className='w-168_'>
+            {chartData.map((chart) =>
+                <div key={chart.id} className='h-248_ w-44 bg-white rounded-lg px-3 py-3.5 flex flex-col justify-between'>
+                    <div className='flex justify-between'>
+                        <div>
+                            <p className='text-11_ font-extrabold  w-full'>
+                                {chart.title}
+                            </p>
+                            <p className='text-11_ font-extrabold  w-full'>
+                                {chart.subTitle}
+                            </p>
+                        </div>
+                        <p className='text-15_ font-bold'>
+                            {chart.count}
+                        </p>
+                    </div>
+                    {/* <div className='relative text-center self-center'> */}
+
+                    <div className='h-92_ w-86_  flex flex-col mx-auto     '>
+                        <GaugeChart
+                            arcsLength={[0.2, 0.2, 0.6,]}
+                            cornerRadius={0}
+                            colors={['#d0affb', '#a345f7', '#000']}
+                            percent={0.3}
+                            style={chartStyle}
+                            id="gauge-chart1" />
+                        <div className='border border-strongPurple   rounded-b-full bg-mildYellow_ h-37_ w-auto ml-3 mr-2.5 ' >
+                        <p className='text-11_ font-bold text-center'>Score</p>
+                        <p className='text-11_ font-bold text-center'>1.3</p>
+
+                        </div>
+
+
+                    </div>
+
+                    <div>
+                        <div className='flex justify-between   border-grayMedium_ border-b-2'>
+                            <div className=''>
+                                <p className='text-9_'> {chart.footerTitle_1}</p>
+                                <p className='text-9_'> {chart.footerSubTitle_1}</p>
+                            </div>
+                            <p className='text-10_'>{chart.footerCount_1}</p>
+                        </div>
+
+                        <div className='flex justify-between'>
+                            <div className=''>
+                                <p className='text-9_'> {chart.footerTitle_2}</p>
+                                <p className='text-9_'> {chart.footerSubTitle_2}</p>
+                            </div>
+                            <p className='text-10_'>{chart.footerCount_2}</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            )
+            }
+        </div>
+    )
+}
+
+export default GuageChart
