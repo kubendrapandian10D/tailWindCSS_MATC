@@ -53,7 +53,7 @@ const GuageChart = () => {
                         <GaugeChart
                             arcsLength={[0.2, 0.2, 0.6,]}
                             cornerRadius={0}
-                            colors={['#d0affb', '#a345f7', '#000']}
+                            colors={['#d0affb', '#a345f7', '#fff']}
                             percent={0.3}
                             style={chartStyle}
                             id="gauge-chart1" />
