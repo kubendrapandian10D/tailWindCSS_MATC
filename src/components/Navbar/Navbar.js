@@ -15,7 +15,7 @@ const Navbar = () => {
   ]
 
   return (
-    <div className={`bg-blackRock min-h-screen ${open ? `w-64` : `w-88`} duration-500`}>
+    <div className={`hidden md:block bg-blackRock min-h-screen ${open ? `min-w-max` : `w-88`} duration-500`}>
       <div className="pt-6 pb-102 flex  mx-4 ">
         
           <img src="./images/navbar/align-justified_menu.svg" alt="Menu button" className="h-6" onClick={() => setOpen(!open)} />

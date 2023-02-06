@@ -5,6 +5,7 @@ import GuageChart from './GuageChart';
 import CustomPieChart from './CustomPieChart';
 import FullPieChart from './FullPieChart';
 import LineChart from './LineChart';
+import TwoBarChart from './TwoBarChart';
 const Chart = () => {
 
   let data = [
@@ -31,6 +32,7 @@ const Chart = () => {
       </div>
       <div className='flex gap-6 mb-6  '>
          <LineChart />
+         <TwoBarChart />
       </div>
     </div>
 

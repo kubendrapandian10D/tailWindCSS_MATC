@@ -11,9 +11,9 @@ const HomePage = () => {
       <section className="flex   ">
 
         <Navbar />
-        <div className=" w-auto bg-lavendarLace_ ">
+        <div className="  w-full bg-lavendarLace_   ">
           <SearchBar />
-          <div className="flex justify-end">
+          <div className="flex justify-end w-1186 ">
             <p className="pl-2 pr-30_ py-2  font-roboto_ font-medium text-xs ">
               Coming Soon
             </p>
