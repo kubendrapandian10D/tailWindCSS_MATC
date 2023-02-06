@@ -38,7 +38,7 @@ const Announcements = () => {
             Announcements
           </p>
           <div className='flex'>
-            <div className='h-35_ w-330_ flex items-center   my-auto border border-mildSandal rounded'>
+            <div className='h-35_ w-100_ md:w-330_ flex items-center   my-auto border border-mildSandal rounded'>
               <p className='pl-2.5  text-13_'>
                 Search
               </p>

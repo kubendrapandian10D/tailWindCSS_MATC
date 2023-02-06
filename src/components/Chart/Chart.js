@@ -24,13 +24,17 @@ const Chart = () => {
 
   return (
     <div>
-      <div className='flex gap-6 mb-6 '>
+      <div className='flex gap-6 mb-6
+      //  md:w-full w-380_ flex-wrap 
+       '>
         <BarChart />
         <CustomPieChart />
         <GuageChart />
         <FullPieChart />
       </div>
-      <div className='flex gap-6 mb-6  '>
+      <div className='flex gap-6 mb-6
+      //  md:w-full w-380_ flex-wrap 
+        '>
          <LineChart />
          <TwoBarChart />
       </div>

@@ -4,7 +4,7 @@ const SearchBar = () => {
     return (
         <div>
 
-            <div className='w-1186 '>
+            <div className='hidden md:block w-1186 '>
 
                 <div className='mx-6 mt-2 h-60 px-6 py-3 flex justify-between rounded-lg drop-shadow-4ds@ bg-white'>
                     <div className='border-solid border w-742@ border-grayLight@ rounded-lg flex'>

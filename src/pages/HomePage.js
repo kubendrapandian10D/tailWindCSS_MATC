@@ -13,7 +13,7 @@ const HomePage = () => {
         <Navbar />
         <div className="  w-full bg-lavendarLace_   ">
           <SearchBar />
-          <div className="flex justify-end w-1186 ">
+          <div className="hidden md:flex justify-end w-1186  ">
             <p className="pl-2 pr-30_ py-2  font-roboto_ font-medium text-xs ">
               Coming Soon
             </p>
@@ -24,8 +24,8 @@ const HomePage = () => {
               Promotion List
             </p>
           </div>
-          <div className="flex ">
-            <div className=" mx-6   w-751_">
+          <div className="flex w-380_ md:w-full flex-wrap-reverse ">
+            <div className=" mx-6 w-363_  md:w-751_">
               <Chart />
               <Announcements />
             </div>
