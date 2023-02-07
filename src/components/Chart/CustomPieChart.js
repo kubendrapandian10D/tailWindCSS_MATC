@@ -5,17 +5,16 @@ const CustomPieChart = () => {
     const chartData = [
         {
             id: 1,
-            title: 'Total Pending Orders',
-            subTitle: 'Today',
-            count: '10',
+            title: 'Best Selling Product sales Contribution',
+            subTitle: ' ',
+            count: '71%',
             compName: 'sample',
-            footerTitle_1: 'Sample',
-            footerSubTitle_1: 'test',
-            footerCount_1: '777',
-
-            footerTitle_2: 'Current Daily Order',
-            footerSubTitle_2: 'Volume limitation',
-            footerCount_2: '10000',
+            footerTitle_1: 'Best selling Products  Low Stock Level',
+            footerSubTitle_1: ' ',
+            footerCount_1: '1', 
+            footerTitle_2: 'Total out of Stock',
+            footerSubTitle_2: ' ',
+            footerCount_2: '1351',
 
         }
     ]
@@ -93,7 +92,7 @@ const CustomPieChart = () => {
                         </div>
                         <div className='absolute inset-y-0 flex items-center justify-center   inset-x-1/2 '>
                             <p className='text-15_ font-bold'>
-                                {chart.count}% </p>
+                                {chart.count} </p>
                         </div>
                     </div>
                     <div>

@@ -50,7 +50,7 @@ const Announcements = () => {
         </div>
 
         {displayData.map((data) =>
-          <div className='w-full h-68_ border border-y-mildSandal flex justify-between'>
+          <div className='w-full h-104_ md:h-68_ border border-y-mildSandal flex justify-between'>
             <div className='flex pl-6 py-4'>
               <p className='text-13_ w-10 text-mildSandal'>
                 {data.date}

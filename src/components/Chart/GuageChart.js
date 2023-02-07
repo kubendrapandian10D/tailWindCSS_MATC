@@ -6,17 +6,17 @@ const GuageChart = () => {
     const chartData = [
         {
             id: 1,
-            title: 'Total Pending Orders',
-            subTitle: 'Today',
-            count: '10',
+            title: 'Your Rating',
+            subTitle: ' ',
+            count: '1.3',
             compName: 'sample',
-            footerTitle_1: 'Sample',
-            footerSubTitle_1: 'test',
-            footerCount_1: '777',
+            footerTitle_1: 'Canceling- Seller Related',
+            footerSubTitle_1: 'Very Poor',
+            footerCount_1: '6%',
 
-            footerTitle_2: 'Current Daily Order',
-            footerSubTitle_2: 'Volume limitation',
-            footerCount_2: '10000',
+            footerTitle_2: 'Handling Time With SLA',
+            footerSubTitle_2: 'Very Poor  ',
+            footerCount_2: '88%',
 
         }
     ]
@@ -49,7 +49,7 @@ const GuageChart = () => {
                     </div>
                     {/* <div className='relative text-center self-center'> */}
 
-                    <div className='h-92_ w-86_  flex flex-col mx-auto     '>
+                    <div className='h-92_ w-86_  mt-4 flex flex-col mx-auto     '>
                         <GaugeChart
                             arcsLength={[0.2, 0.2, 0.6,]}
                             cornerRadius={0}

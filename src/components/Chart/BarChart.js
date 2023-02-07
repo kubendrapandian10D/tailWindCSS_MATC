@@ -12,9 +12,9 @@ const BarChart = () => {
             subTitle: 'Today',
             count: '10',
             compName: 'sample',
-            footerTitle_1: 'Sample',
-            footerSubTitle_1: 'test',
-            footerCount_1: '777',
+            footerTitle_1: ' ',
+            footerSubTitle_1: ' ',
+            footerCount_1: ' ',
 
             footerTitle_2: 'Current Daily Order',
             footerSubTitle_2: 'Volume limitation',
@@ -56,7 +56,7 @@ const BarChart = () => {
                             <p className='text-11_ font-extrabold  w-full'>
                                 {chart.title}
                             </p>
-                            <p className='text-11_ font-extrabold  w-full'>
+                            <p className='text-11_ font-light  w-full'>
                                 {chart.subTitle}
                             </p>
                         </div>
@@ -154,7 +154,7 @@ const BarChart = () => {
 
                         <div className='flex justify-between'>
                             <div className=''>
-                                <p className='text-9_'> {chart.footerTitle_2}</p>
+                                <p className='text-9_ font-extrabold'> {chart.footerTitle_2}</p>
                                 <p className='text-9_'> {chart.footerSubTitle_2}</p>
                             </div>
                             <p className='text-10_'>{chart.footerCount_2}</p>

@@ -15,6 +15,7 @@ const Promotion = () => {
       validTill: '28 Feb - 07 Mar 22',
       vouchDisc: 10,
       regUntil: ' 22 Feb 22',
+      imageName:'Group_345',
       sellerFunded: 100,
       sellers: 0,
       products: 0,
@@ -30,6 +31,7 @@ const Promotion = () => {
       validTill: '28 Feb - 07 Mar 22',
       vouchDisc: 10,
       regUntil: ' 22 Feb 22',
+      imageName:'Group_346',
       sellerFunded: 100,
       sellers: 0,
       products: 0,
@@ -44,6 +46,7 @@ const Promotion = () => {
       countdown: '03:16:21',
       validTill: '18 Feb  22',
       vouchDisc: 30,
+      imageName:'Group_347',
       regUntil: ' 22 Feb 22',
       sellerFunded: 85,
       sellers: 0,
@@ -62,7 +65,10 @@ const Promotion = () => {
         {data.title}
       </p>
       <div className='flex'>
-        <img src="./images/promotions/large_image.svg" alt="bell button" className=" w-157_ h-full my-1  " />
+        {/* <img src="./images/promotions/large_image.svg" alt="bell button" className=" w-157_ h-full my-1  " /> */}
+        <img src={`./images/promotions/${data.imageName}.svg`} alt="bell button" className=" w-157_ h-full my-1  " />
+        
+        
         <div className='ml-3 mt-2.5'>
           <div className='flex flex-col '>
             <div className='flex  '>
