@@ -33,7 +33,8 @@ const GuageChart = () => {
 
         <div className='w-168_'>
             {chartData.map((chart) =>
-                <div key={chart.id} className='h-248_ w-44 bg-white rounded-lg px-3 py-3.5 flex flex-col justify-between'>
+                <div key={chart.id} className='
+                small-chart-wrapper'>
                     <div className='flex justify-between'>
                         <div>
                             <p className='text-11_ font-extrabold  w-full'>

@@ -88,7 +88,9 @@ const LineChart = () => {
     return (
         <div className='w-363_'>
             {chartData.map((chart) =>
-                <div key={chart.id} className='h-248_   bg-white rounded-lg px-3 py-3.5 flex flex-col justify-between'>
+                <div key={chart.id} className='
+                large-chart-wrapper
+                '>
                     <div className='flex justify-between'>
                         <div>
                             <p className='text-11_ font-extrabold  w-full'>
