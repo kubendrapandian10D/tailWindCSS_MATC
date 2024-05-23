@@ -14,10 +14,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '20'
           
@@ -34,6 +34,6 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push Docker image
-        run: 
+        run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/tailWindCSS_MATC:latest .
           docker push ${{ secrets.DOCKER_USERNAME }}/tailWindCSS_MATC:latest
