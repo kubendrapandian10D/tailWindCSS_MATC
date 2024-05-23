@@ -34,8 +34,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push tailWindCSS_MATC
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/tailWindCSS_MATC:latest .
+        run: |
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/tailwindCSS:latest .
+          docker push ${{ secrets.DOCKER_USERNAME }}/tailwindCSS:latest
+
