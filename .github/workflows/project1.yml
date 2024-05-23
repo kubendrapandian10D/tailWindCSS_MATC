@@ -1,4 +1,4 @@
-name: CI/CD Pipeline for tailwindCSS_MATC
+name: CI/CD Pipeline for tailwindCSS
 
 on:
   push:
@@ -18,7 +18,9 @@ jobs:
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
-       
+        with:
+          node-version: '20'
+          
       - name: Install dependencies
         run: npm install
 
@@ -32,6 +34,6 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push Docker image
-        run: |
+        run: 
           docker build -t ${{ secrets.DOCKER_USERNAME }}/tailWindCSS_MATC:latest .
           docker push ${{ secrets.DOCKER_USERNAME }}/tailWindCSS_MATC:latest
