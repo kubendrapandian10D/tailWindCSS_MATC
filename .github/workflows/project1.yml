@@ -1,4 +1,4 @@
-name: CI/CD Pipeline for tailWindCSS_MATC
+name: CI/CD Pipeline for tailWindCSS_MATC1
 
 on:
   push:
