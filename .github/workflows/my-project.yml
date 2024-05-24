@@ -19,6 +19,7 @@ jobs:
 
 
    steps:
+   
      - name: Checkout repository
        uses: actions/checkout@v3
 
@@ -33,12 +34,21 @@ jobs:
        run: docker build -t kubendrapandian10d/my-project:latest .
       
      - name: Push Docker image
-       run: docker push kubendrapandian10d/my-project:latest
+       run: docker push kubendrapandian10d/my-project:latest 
 
+     - name: Extract metadata (tags, labels) for Docker
+       id: meta
+       uses: docker/metadata-action@v4
+       with:
+          images: kubendrapandian10d/my-project
+          
      - name: Build and push Docker image
        uses: docker/build-push-action@v4
        with:
          context: .
          push: true
          tags: kubendrapandian10d/my-project:latest
+         labels: kubendrapandian10d/my-project:latest
         
+
+
