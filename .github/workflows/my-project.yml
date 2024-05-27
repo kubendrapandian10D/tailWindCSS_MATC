@@ -29,6 +29,8 @@ jobs:
        with:
          username: ${{ secrets.DOCKER_USERNAME }}
          password: ${{ secrets.DOCKER_PASSWORD }}
+         DOCKER_ACCESS_TOKEN=$(curl -s -H "Content-Type: application/json" -X POST -d '{"username": "'$DOCKER_USERNAME", "password": "*$DOCKER_PASSWORD'"}' https://hub.docker.com/v2/users/login/jq -r .token) input_string=$(curl -s -H "Authorization: Bearer $DOCKER_ACCESS_TOKEN" https://registry.hub.docker.com/v2/repositories/decoders10/$DOW JONES/tags | jq -r '.results | max_by(.last_updated) | .name') number=$(echo "$input_string" | grep -OE '[0-9]+$') && new_number=$((number + 1)) && new_string=$(echo "$input_string" | sed "s/$number$/$new_number/")
+27
 
      - name: Build Docker image
        run: docker build -t kubendrapandian10d/my-project:latest .
