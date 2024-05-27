@@ -19,9 +19,17 @@ jobs:
       - name: Determine Version
         id: version
         run: |
-         version="v1.0.$(( $( x | wc -l) + 1 ))"
-         echo "Version: $version"
-         echo "::set-output name=version::$version"
+          git fetch --tags
+          latest_tag=$(git describe --tags `git rev-list --tags --max-count=1`)
+          if [ -z "$latest_tag" ]; then
+            new_version="v1.0.1"
+          else
+            number=$(echo "$latest_tag" | grep -oE '[0-9]+$')
+            new_number=$((number + 1))
+            new_version=$(echo "$latest_tag" | sed "s/$number$/$new_number/")
+          fi
+          echo "New version: $new_version"
+          echo "::set-output name=version::$new_version"
 
 
       - name: Build Docker image
