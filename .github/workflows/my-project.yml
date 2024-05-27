@@ -17,12 +17,13 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
      
-      - name: Generate version
+      - name: determine version
+        id: version
         run: |
           tag_count=$(git tag | wc -l)
           new_version="v1.0.$((tag_count + 1))"
           echo "Version: $new_version"
-          echo "version=$new_version" >> "$GITHUB_OUTPUT"
+          echo "::set-output name=version::$new_version"
 
       - name: Use the new version
         run: echo "The new version is ${{ steps.generate-version.outputs.version }}"
