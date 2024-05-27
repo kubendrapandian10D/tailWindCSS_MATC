@@ -31,10 +31,10 @@ jobs:
          password: ${{ secrets.DOCKER_PASSWORD }}
          
      - name: Build Docker image
-       run: docker build -t kubendrapandian10d/my-project:v1 .
+       run: docker build -t kubendrapandian10d/my-project:v2 .
       
      - name: Push Docker image
-       run: docker push kubendrapandian10d/my-project:v1
+       run: docker push kubendrapandian10d/my-project:v2
 
      - name: Extract metadata (tags, labels) for Docker
        id: meta
@@ -44,12 +44,12 @@ jobs:
           
      - name: Build and push Docker image
        run: |
-         docker build -t kubendrapandian10d/my-project:v1 .
-         docker push kubendrapandian10d/my-project:v1
+         docker build -t kubendrapandian10d/my-project:v2 .
+         docker push kubendrapandian10d/my-project:v2
 
      - name: Pull latest version from DockerHub
        run: |
-         docker pull kubendrapandian10d/my-project:v1
+         docker pull kubendrapandian10d/my-project:v2
 
      - name: Pull all versions from DockerHub
        run: |
