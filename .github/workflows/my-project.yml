@@ -19,11 +19,10 @@ jobs:
          username: ${{ secrets.DOCKER_USERNAME }}
          password: ${{ secrets.DOCKER_PASSWORD }}
          
-
       - name: Retrieve Latest Docker Tag
         id: latest_tag
         run: |
-          latest_tag=$(curl -s -H "Authorization: Bearer $DOCKER_ACCESS_TOKEN" https://registry.hub.docker.com/v2/repositories/kubendrapandian10d/my-project/tags | jq -r '.results | map(select(.name | test("^v[0-9]+$"))) | map(.name | ltrimstr("v")) | map(tonumber) | max')
+          latest_tag=$(curl -s -H "Authorization: Bearer ${{ secrets.DOCKER_ACCESS_TOKEN }}" https://registry.hub.docker.com/v2/repositories/kubendrapandian10d/my-project/tags | jq -r '.results | map(select(.name | test("^v[0-9]+$"))) | map(.name | ltrimstr("v")) | map(tonumber) | max')
           echo "::set-output name=latest_tag::v${latest_tag:-0}"
 
       - name: Increment Version Number
@@ -32,7 +31,7 @@ jobs:
           latest_tag=${{ steps.latest_tag.outputs.latest_tag }}
           new_version=$((latest_tag + 1))
           echo "::set-output name=new_version::v$new_version"
-
+          
       - name: Build Docker Image
         run: docker build -t kubendrapandian10d/my-project:${{ steps.increment_version.outputs.new_version }} .
 
