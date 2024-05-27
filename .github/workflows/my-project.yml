@@ -18,7 +18,11 @@ jobs:
 
       - name: Determine Version
         id: version
-        run: echo "::set-output name=version::v1.0.$(( $(git rev-list --count HEAD) + 1 ))"
+        run: |
+         version="v1.0.$(( $(git tag | wc -l) + 1 ))"
+         echo "Version: $version"
+         echo "::set-output name=version::$version"
+
 
       - name: Build Docker image
         run: docker build -t kubendrapandian10d/my-project:${{ steps.version.outputs.version }} .
