@@ -51,4 +51,7 @@ jobs:
        run: |
          docker pull kubendrapandian10d/my-project:latest
 
+     - name: Pull older version from DockerHub
+       run: |
+         docker pull kubendrapandian10d/my-project:olderversion
 
