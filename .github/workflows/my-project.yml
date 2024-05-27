@@ -19,7 +19,7 @@ jobs:
       - name: Determine Version
         id: version
         run: |
-         version="v1.0.$(( $(git tag | wc -l) + 1 ))"
+         version="v1.0.$(( $( x | wc -l) + 1 ))"
          echo "Version: $version"
          echo "::set-output name=version::$version"
 
